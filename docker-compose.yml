@@ -1,0 +1,17 @@
+version: '3'
+volumes:
+  static-files:
+services:
+  nginx:
+    image: knaou/mysign-nginx
+    ports:
+      - 8080:80
+    volumes:
+      - static-files:/app/public
+    depends_on:
+      - app
+  app:
+    image: knaou/mysign-app
+    volumes:
+      - static-files:/app/public
+      - ./data:/app/data

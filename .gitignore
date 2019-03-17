@@ -1,0 +1,7 @@
+/.idea
+/client/node_modules
+/server/*.sqlite3
+/server/static
+/build
+/data
+__pycache__
