@@ -5,7 +5,7 @@ ENV DB_FILE "/app/data/db.sqlite3"
 
 COPY env/requirements.txt /tmp/requirements.txt
 RUN apt update && \
-    apt install openssl make gcc && \
+    apt install -y openssl make gcc && \
     pip3 install -r /tmp/requirements.txt && \
     apt clean && rm -rf /var/lib/apt/lists/*
 
