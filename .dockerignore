@@ -1,5 +1,4 @@
 /.idea
-/client
 /server/*.sqlite3
 /env/venv
 **/__pycache__
