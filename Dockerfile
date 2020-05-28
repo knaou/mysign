@@ -1,5 +1,4 @@
 FROM node as client
-RUN npm install -g yarn
 COPY client /work/src
 WORKDIR /work/src
 RUN yarn install && yarn build

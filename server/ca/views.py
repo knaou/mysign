@@ -23,7 +23,7 @@ class CertificateAuthorityViewSet(viewsets.ModelViewSet):
         description = wiz.data['description']
         key = private_key_from_params(wiz.data)
         csr = csr_from_params(key, wiz.data)
-        cert_def = CertificateDefinition(key, csr, csr, 0)
+        cert_def = CertificateDefinition(key, csr, csr, 0, minutes=10 * 365 * 24 * 60 * 60)
         cert_def.set_key_usage(digital_signature=True, crl_sign=True, key_cert_sign=True)
         # TODO: set from params
         cert_def.set_certType(sslCA=True, emailCA=True, objCA=True)

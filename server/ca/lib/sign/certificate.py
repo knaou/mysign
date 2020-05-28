@@ -8,7 +8,7 @@ class CertificateDefinition:
                  issuer_key: Key, issuer_csr: Request,
                  request_csr: Request,
                  serial,
-                 minutes: int = 10 * 365 * 24 * 60 * 60,
+                 minutes: int = 365 * 24 * 60 * 60,
                  digest: str = "sha256"):
 
         self._issuer_key = issuer_key
